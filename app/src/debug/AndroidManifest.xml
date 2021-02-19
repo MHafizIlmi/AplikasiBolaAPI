@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  package="id.hafiz.bolaapi">
+
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+    <activity
+      android:name=".SingleFragmentActivity"
+      android:theme="@style/AppTheme.NoActionBar" />
+  </application>
+
+</manifest>

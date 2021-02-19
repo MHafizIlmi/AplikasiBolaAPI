@@ -1,0 +1,23 @@
+<resources>
+  <string name="app_name">Aplikasi Bola</string>
+  <string name="db_name">league-sport.db</string>
+  <string name="dismiss">Dismiss</string>
+  <string name="title_search_hint">Cari Pertandingan atau Tim</string>
+  <string name="title_favorite">Favorit</string>
+  <string name="title_league">Liga</string>
+  <string name="msg_empty_result">No data!</string>
+  <string name="msg_failed_add_fav">Gagal menambahkan ke favorit!</string>
+  <string name="msg_failed_remove_fav">Gagal menghapus dari favorit!</string>
+  <string name="msg_ok_add_fav">Ditambahkan ke favorit</string>
+  <string name="msg_ok_remove_fav">Dihapus dari favorit!</string>
+  <string name="msg_please_wait">Mohon tunggu…</string>
+  <string name="msg_long_wait">Anyway, why don\'t you order a chicken or sandwich?</string>
+  <string name="msg_response_empty">You got nothing!</string>
+  <string name="msg_response_failure">Belum ada pertandingan</string>
+  <string name="msg_response_error">Ops! Response error</string>
+  <string name="msg_user_unknown_error">Unknown error occurred!</string>
+  <string name="menu_favorite">Toggle favorite</string>
+  <string name="menu_search">Cari</string>
+  <string name="msg_loading">Loading data…</string>
+  <string name="title_team">Tim</string>
+</resources>

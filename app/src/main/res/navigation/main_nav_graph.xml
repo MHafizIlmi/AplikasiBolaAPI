@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/main_nav_graph"
+  app:startDestination="@id/homeFragment">
+
+  <!-- fragments -->
+  <fragment
+    android:id="@+id/homeFragment"
+    android:name="id.hafiz.bolaapi.ui.home.HomeFragment">
+    <action
+      android:id="@+id/action_to_leagueDetail"
+      app:destination="@id/leagueDetailFragment"
+      app:enterAnim="@anim/slide_in_right"
+      app:exitAnim="@anim/slide_out_left" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/leagueDetailFragment"
+    android:name="id.hafiz.bolaapi.ui.leaguedetail.LeagueDetailFragment">
+    <argument
+      android:name="leagueId"
+      android:defaultValue="0L"
+      app:argType="long" />
+    <action
+      android:id="@+id/action_to_event"
+      app:destination="@id/eventFragment"
+      app:enterAnim="@anim/slide_in_right"
+      app:exitAnim="@anim/slide_out_left" />
+    <action
+      android:id="@+id/action_to_team"
+      app:destination="@id/teamFragment"
+      app:enterAnim="@anim/slide_in_right"
+      app:exitAnim="@anim/slide_out_left" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/eventDetailFragment"
+    android:name="id.hafiz.bolaapi.ui.eventdetail.EventDetailFragment">
+    <argument
+      android:name="eventId"
+      android:defaultValue="0L"
+      app:argType="long" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/eventFragment"
+    android:name="id.hafiz.bolaapi.ui.event.EventFragment">
+    <argument
+      android:name="leagueId"
+      android:defaultValue="0L"
+      app:argType="long" />
+    <argument
+      android:name="eventType"
+      app:argType="id.hafiz.bolaapi.data.source.repository.EventRepository$EventType" />
+    <argument
+      android:name="desc"
+      android:defaultValue="Events"
+      app:argType="string" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/searchFragment"
+    android:name="id.hafiz.bolaapi.ui.search.SearchFragment" />
+
+  <fragment
+    android:id="@+id/teamFragment"
+    android:name="id.hafiz.bolaapi.ui.team.TeamFragment">
+    <argument
+      android:name="leagueId"
+      android:defaultValue="0L"
+      app:argType="long" />
+    <argument
+      android:name="desc"
+      android:defaultValue="Teams"
+      app:argType="string" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/teamDetailFragment"
+    android:name="id.hafiz.bolaapi.ui.teamdetail.TeamDetailFragment">
+    <argument
+      android:name="teamId"
+      android:defaultValue="0L"
+      app:argType="long" />
+  </fragment>
+
+  <!-- Global actions -->
+  <action
+    android:id="@+id/action_to_eventDetail"
+    app:destination="@id/eventDetailFragment"
+    app:enterAnim="@anim/slide_in_right"
+    app:exitAnim="@anim/slide_out_left" />
+
+  <action
+    android:id="@+id/action_to_search"
+    app:destination="@id/searchFragment"
+    app:enterAnim="@anim/slide_in_right"
+    app:exitAnim="@anim/slide_out_left" />
+
+  <action
+    android:id="@+id/action_to_teamDetail"
+    app:destination="@id/teamDetailFragment"
+    app:enterAnim="@anim/slide_in_right"
+    app:exitAnim="@anim/slide_out_left" />
+</navigation>
